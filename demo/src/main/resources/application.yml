@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 16436130
+    url: jdbc:mysql://localhost:3306/db
+mybatis:
+  type-aliases-package: com.zps.demo.domain
