@@ -11,7 +11,7 @@ public class DemoApplication {
     }
 
     public void test(){
-        System.out.println("Test");
+        System.out.println("Testq");
     }
 
     public void test2(){
