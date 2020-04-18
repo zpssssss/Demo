@@ -11,6 +11,10 @@ public class DemoApplication {
     }
 
     public void test(){
-        System.out,println("Test");
+        System.out.println("Test");
+    }
+
+    public void test2(){
+
     }
 }
