@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zps.xml_demo.mapper.DeptMapper">
+
+    <resultMap id="deptMap" type="com.zps.xml_demo.pojo.Dept">
+        <id column="did" property="id"/>
+        <result column="dname" property="name"/>
+        <result column="loc" property="loc"/>
+        <collection property="empList" ofType="com.zps.xml_demo.pojo.Emp">
+            <result column="eid" property="id"></result>
+            <result column="joindate" property="joinDate" ></result>
+            <result column="salary" property="salary"></result>
+            <result column="bonus" property="bonus"></result>
+            <result column="dept_id" property="deptId"></result>
+        </collection>
+    </resultMap>
+
+
+    <select id="findAll2"  resultMap="deptMap">
+        select
+            d.id did,
+            d.dname,
+            e.id eid,
+            e.joindate,
+            e.salary,
+            e.bonus,
+            e.dept_id
+        from
+            dept d
+        LEFT JOIN
+            emp e
+        on
+            d.id = e.dept_id;
+    </select>
+</mapper>
