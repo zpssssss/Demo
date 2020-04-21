@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.zps.xml_demo.mapper")
 public class XmlDemoApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(XmlDemoApplication.class, args);
     }
