@@ -11,6 +11,7 @@ import java.util.List;
  */
 public interface EmpMapper extends BaseMapper<Emp> {
 
+
     @Select("select * from emp where dept_id = #{id}")
     public List<Emp> findEmpById(Integer id);
 
